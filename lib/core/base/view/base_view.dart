@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-class BaseView<T> extends StatefulWidget {
+import 'package:mobx/mobx.dart';
+class BaseView<T extends Store> extends StatefulWidget {
   final Widget Function(BuildContext context, T value)
       onPageBuilder;
   final T viewModel;
